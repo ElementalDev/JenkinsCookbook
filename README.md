@@ -115,7 +115,7 @@ Inspec has been used to write and test the integration tests. There are tests fo
 </p>
 
 <p style="font-size: 18px;">
-These tests are run using the configuration written in the kitchen.yml, which is using vagrant. It is also pipeline ready, with a kitchen.cloud.yml to enable it to run on an AWS instance within a CI/CD pipeline for automation purposes.
+These tests are run using the configuration written in the kitchen.yml, which is using vagrant.
 </p>
 
 <p style="font-size: 18px;">
