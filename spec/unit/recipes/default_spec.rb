@@ -26,11 +26,7 @@ describe 'jenkins::default' do
     it "should install java 8" do
       expect(chef_run).to install_package("openjdk-8-jdk")
     end
-
-    it "should add key using bash" do
-      expect(chef_run).to run_bash("add_jenkins_key")
-    end
-
+    
     it "should add jenkins to the sources list" do
       expect(chef_run).to add_apt_repository("add_jenkins")
     end
