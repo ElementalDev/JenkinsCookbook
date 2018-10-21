@@ -16,7 +16,7 @@
 <u><h2 id="what">What is Jenkins?</h2></u>
 
 <p style="font-size: 18px;">
-Jenkins is a DevOps tool used to create Continuous Integration/Continuous Delivery/Continuous Deployment pipelines (CI/CD/CD). The key differences between the 3 pipelines are that:
+<a href="https://jenkins.io/">Jenkins</a> is a DevOps tool used to create Continuous Integration/Continuous Delivery/Continuous Deployment pipelines (CI/CD/CD). The key differences between the 3 pipelines are that:
   <ul style="font-size: 16px;">
     <li>CI - A pipeline that pulls the projects code from a version control systems development branch, tests it using the tests that the developer creates and (should they pass) pushes the code to the UAT/Live branch</li>  
     <li>CD(elivery) - Pulls code from the UAT branch and tests it on a UAT environment. From that UAT machine, if the tests pass, it is pushed to a live production environment.</li>  
@@ -32,7 +32,7 @@ Jenkins also has several plugins to allow it to communicate with other services 
 Jenkins builds are colour coded and can be customised to suit the needs of the developer using it. The default colours are:
   <ul style="font-size: 16px;">
     <li>Blue = Pass</li>
-    <li>Red = Fail</li> 
+    <li>Red = Fail</li>
     <li>Grey = Build interrupted/Cancelled</li>
   </ul>
 </p>
