@@ -23,16 +23,12 @@ describe 'jenkins::default' do
       expect(chef_run).to update_apt_update("update")
     end
 
-    it "should update all resources with jenkins" do
-      expect(chef_run).to update_apt_update("update_with_jenkins")
-    end
-
     it "should install java 8" do
       expect(chef_run).to install_package("openjdk-8-jdk")
     end
 
     it "should add key using bash" do
-      expect(chef_run).to run_bash("cd /tmp && wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -s")
+      expect(chef_run).to run_bash("add_jenkins_key")
     end
 
     it "should add jenkins to the sources list" do

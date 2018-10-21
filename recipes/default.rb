@@ -14,21 +14,16 @@ package("openjdk-8-jdk") do
   action :install
 end
 
-# Get the repo key for Jenkins
-bash("cd /tmp && wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -") do
-  code "cd /tmp && wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -"
-end
-
 # Add Jenkins to the repo list
 apt_repository "add_jenkins" do
-  uri "https://pkg.jenkins.io/debian"
-  distribution "stable"
-  components ["binary"]
+  key "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
+  uri "http://pkg.jenkins.io/debian-stable"
+  distribution "binary/"
   action :add
 end
 
 # Update resources after Jenkins added
-apt_update("update_with_jenkins") do
+apt_update("update") do
   action :update
 end
 

@@ -5,14 +5,16 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+# This is an example test, replace it with your own test.
+
+# Java 8 should be installed
+describe package("openjdk-8-jdk") do
+  it { should be_installed }
+  its("version") { should match "8u181-b13-0ubuntu0.16.04.1" }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+# The jenkins apt should have been added
+describe apt("http://pkg.jenkins.io/debian-stable") do
+  it { should exist }
+  it { should be_enabled }
 end
