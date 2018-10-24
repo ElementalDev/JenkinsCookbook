@@ -57,7 +57,7 @@ To use this cookbook, Follow these initial steps:
 ```ruby
 source "https://supermarket.chef.io"
 
-cookbook "jenkins", git: "git@github.com:RCollettSG/JenkinsCookbook.git"
+cookbook "jenkins", git: "https://github.com/RCollettSG/JenkinsCookbook.git"
 ```
 
 4. <p style="font-size: 16px;"> Save the Berksfile and run this line in your console under the same directory it is in. </p>
